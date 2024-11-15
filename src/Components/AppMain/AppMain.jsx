@@ -1,5 +1,4 @@
 import { useState } from 'react';
-
 import languages from '../../../database/languages.js'
 import style from './AppMain.module.css'
 import Button from '../Buttons/Button.jsx';
@@ -9,10 +8,9 @@ export default function AppMain() {
 
     function handleClick(e) {
         const newActive = Number(e.target.getAttribute('data-index'))
-        console.log(e.target.getAttribute('class'));
-
+        active == newActive ? setActive(null) : setActive(newActive)
         console.log(newActive);
-        setActive(newActive)
+
     }
 
     return (
@@ -22,12 +20,9 @@ export default function AppMain() {
                     {languages.map((item, index) => (
 
                         <li key={item.id}>
-
                             <Button className={active == index ? item.title : ''} onClick={handleClick} item={item} />
-
                         </li>
                     ))}
-
                 </ul>
                 <div className="description">
                     <h3 className={active == null ? 'active' : 'hidden'}>Select a Language</h3>
