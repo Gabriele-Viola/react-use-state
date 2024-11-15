@@ -20,7 +20,10 @@ export default function AppMain() {
 
                         <li key={item.id}>
                             <button onClick={handleClick} data-index={index}>{item.title}</button>
-                            <Button onClick={handleClick} data-index={index} item={item} />
+                            <div onClick={handleClick} data-index={index}>
+
+                                <Button item={item} />
+                            </div>
                         </li>
                     ))}
 
