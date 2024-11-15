@@ -21,9 +21,7 @@ export default function AppMain() {
                     {languages.map((item, index) => (
 
                         <li key={item.id}>
-                            <button onClick={handleClick} data-index={index}>{item.title}</button>
                             <div onClick={handleClick} >
-
                                 <Button data-index={index} item={item} />
                             </div>
                         </li>

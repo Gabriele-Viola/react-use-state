@@ -5,6 +5,6 @@ export default function Button({ item }) {
 
     return (
 
-        <button data-index={item.id - 1}>{item.title}</button>
+        <button className={style[item.title.toLowerCase().replace('.', '')]} data-index={item.id - 1}>{item.title}</button>
     )
 }
