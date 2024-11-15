@@ -1,25 +1,9 @@
-.hidden {
-    display: none;
-}
-
 ul {
     display: flex;
+    justify-content: space-between;
     padding: .5rem;
     list-style: none;
-
-    li {
-        margin: .75rem 1rem;
-    }
-}
-
-.description {
-    border: 1px solid lightgray;
-    border-radius: 1rem;
-    padding: 1rem;
-
-    .content {
-        padding: 1rem 0;
-    }
+    margin: 1rem 0;
 
 
 }
