@@ -8,6 +8,8 @@ export default function AppMain() {
 
     function handleClick(e) {
         const newActive = Number(e.target.getAttribute('data-index'))
+        console.log(e.target);
+
         console.log(newActive);
         setActive(newActive)
     }
@@ -20,9 +22,9 @@ export default function AppMain() {
 
                         <li key={item.id}>
                             <button onClick={handleClick} data-index={index}>{item.title}</button>
-                            <div onClick={handleClick} data-index={index}>
+                            <div onClick={handleClick} >
 
-                                <Button item={item} />
+                                <Button data-index={index} item={item} />
                             </div>
                         </li>
                     ))}

@@ -5,6 +5,6 @@ export default function Button({ item }) {
 
     return (
 
-        <button >{item.title}</button>
+        <button data-index={item.id - 1}>{item.title}</button>
     )
 }
